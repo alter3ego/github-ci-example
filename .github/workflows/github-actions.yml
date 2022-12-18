@@ -1,13 +1,11 @@
-name: GitHub Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  pull_request:
-    types:
-      - closed
+name: Java CI
+
+on: [push]
+
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -17,4 +15,3 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
-             echo "Pull Request ${number} (${sha})"
