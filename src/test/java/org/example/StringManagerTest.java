@@ -1,11 +1,13 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringManagerTest {
+class StringManagerTest {
     private final StringManager stringManager = new StringManager();
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getReverseUppercaseString() {
         String source = "Hello world!";
         String expected = "!DLROW OLLEH";
