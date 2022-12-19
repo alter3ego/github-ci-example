@@ -2,7 +2,7 @@ package org.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class StringManagerTest {
+public class StringManagerTest {
     private final StringManager stringManager = new StringManager();
 
     @org.junit.jupiter.api.Test
